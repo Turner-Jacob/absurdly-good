@@ -2,10 +2,13 @@ import subprocess
 import sys
 
 subprocess.check_call([sys.executable, "-m", "pip", "install", "streamlit"])
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import streamlit as st
+subprocess.check_call([sys.executable, "-m", "pip", "install", "matplotlib"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "numpy"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "pandas"])
+import matplotlib.pyplot as plt  # type: ignore[reportMissingModuleSource]
+import numpy as np  # type: ignore[reportMissingModuleSource]
+import pandas as pd  # type: ignore[reportMissingModuleSource]
+import streamlit as st  # type: ignore[reportMissingModuleSource]
 subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl"])
 
 st.set_page_config(page_title="Benford's Law Analysis Dashboard", layout="wide")
